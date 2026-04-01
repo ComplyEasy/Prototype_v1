@@ -1,0 +1,61 @@
+{
+  "overall": 67,
+  "modules": {
+    "gst": {
+      "score": 72,
+      "label": "GST",
+      "status": "yellow",
+      "summary": "1 return overdue, 2 upcoming",
+      "nextAction": "File GSTR-3B for March",
+      "nextDue": "2026-04-20"
+    },
+    "tds": {
+      "score": 55,
+      "label": "TDS",
+      "status": "red",
+      "summary": "Challan payment due in 5 days",
+      "nextAction": "Pay TDS Challan 281",
+      "nextDue": "2026-04-07"
+    },
+    "roc": {
+      "score": 88,
+      "label": "ROC",
+      "status": "green",
+      "summary": "All filings up to date",
+      "nextAction": "DIR-3 KYC due Sept 30",
+      "nextDue": "2026-09-30"
+    }
+  },
+  "notifications": [
+    {
+      "id": "n1",
+      "type": "urgent",
+      "message": "TDS Challan 281 due in 5 days — ₹38,400 payable",
+      "time": "Just now"
+    },
+    {
+      "id": "n2",
+      "type": "warning",
+      "message": "GSTR-1 for March due in 9 days",
+      "time": "2 hours ago"
+    },
+    {
+      "id": "n3",
+      "type": "info",
+      "message": "Your CA has reviewed the MGT-7 draft",
+      "time": "Yesterday"
+    },
+    {
+      "id": "n4",
+      "type": "tip",
+      "message": "You may qualify for Section 80IAC tax holiday — check Exemptions",
+      "time": "2 days ago"
+    },
+    {
+      "id": "n5",
+      "type": "info",
+      "message": "GSTR-3B for March is overdue. File immediately to avoid penalty.",
+      "time": "3 days ago"
+    }
+  ]
+}

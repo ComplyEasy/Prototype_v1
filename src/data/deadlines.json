@@ -1,0 +1,90 @@
+[
+  {
+    "id": "d1",
+    "title": "GSTR-3B",
+    "label": "Monthly GST Return",
+    "type": "gst",
+    "dueDate": "2026-04-20",
+    "status": "upcoming",
+    "daysLeft": 18,
+    "action": "File Now",
+    "actionHref": "/gst"
+  },
+  {
+    "id": "d2",
+    "title": "GSTR-1",
+    "label": "Sales Invoice Return",
+    "type": "gst",
+    "dueDate": "2026-04-11",
+    "status": "urgent",
+    "daysLeft": 9,
+    "action": "File Now",
+    "actionHref": "/gst"
+  },
+  {
+    "id": "d3",
+    "title": "TDS Challan 281",
+    "label": "TDS Payment for March",
+    "type": "tds",
+    "dueDate": "2026-04-07",
+    "status": "urgent",
+    "daysLeft": 5,
+    "action": "Pay Now",
+    "actionHref": "/tds"
+  },
+  {
+    "id": "d4",
+    "title": "Form 16A",
+    "label": "TDS Certificate — Q4",
+    "type": "tds",
+    "dueDate": "2026-05-15",
+    "status": "upcoming",
+    "daysLeft": 43,
+    "action": "Prepare",
+    "actionHref": "/tds"
+  },
+  {
+    "id": "d5",
+    "title": "DIR-3 KYC",
+    "label": "Director KYC Filing",
+    "type": "roc",
+    "dueDate": "2026-09-30",
+    "status": "upcoming",
+    "daysLeft": 181,
+    "action": "View",
+    "actionHref": "/roc"
+  },
+  {
+    "id": "d6",
+    "title": "MGT-7",
+    "label": "Annual Return (MCA)",
+    "type": "roc",
+    "dueDate": "2026-11-29",
+    "status": "upcoming",
+    "daysLeft": 241,
+    "action": "Prepare",
+    "actionHref": "/roc"
+  },
+  {
+    "id": "d7",
+    "title": "AOC-4",
+    "label": "Financial Statements Filing",
+    "type": "roc",
+    "dueDate": "2026-10-29",
+    "status": "upcoming",
+    "daysLeft": 210,
+    "action": "Send to CA",
+    "actionHref": "/ca-requests"
+  },
+  {
+    "id": "d8",
+    "title": "GSTR-3B",
+    "label": "Monthly GST Return",
+    "type": "gst",
+    "dueDate": "2026-03-20",
+    "status": "overdue",
+    "daysLeft": -13,
+    "action": "File Now",
+    "actionHref": "/gst"
+  }
+]

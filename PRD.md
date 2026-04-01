@@ -1,11 +1,11 @@
-# ComplianceOS — Product Requirements Document
+# CompliEasy — Product Requirements Document
 ### Frontend Prototype | Next.js | April 2026
 
 ---
 
 ## Overview
 
-**Product:** ComplianceOS — Compliance Management SaaS for Indian Startups  
+**Product:** CompliEasy — Compliance Management SaaS for Indian Startups  
 **Target User:** Non-technical startup founder with no compliance knowledge, fully dependent on CAs  
 **Goal:** Make compliance simple, reduce CA dependency, save money  
 **Prototype Scope:** Frontend only (Next.js, mock data, no live APIs)  

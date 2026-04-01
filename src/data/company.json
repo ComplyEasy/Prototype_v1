@@ -1,0 +1,28 @@
+{
+  "gstin": {
+    "number": "27AABCU9603R1ZX",
+    "businessName": "Acme Technologies Pvt Ltd",
+    "tradeName": "Acme Tech",
+    "registrationDate": "15 March 2022",
+    "status": "Active",
+    "type": "Regular",
+    "state": "Maharashtra",
+    "filingFrequency": "Monthly"
+  },
+  "cin": {
+    "number": "U72900MH2022PTC378659",
+    "companyType": "Private Limited Company",
+    "incorporationDate": "10 January 2022",
+    "registeredState": "Maharashtra",
+    "category": "Company limited by Shares",
+    "directors": [
+      { "name": "Rahul Sharma", "din": "09876543" },
+      { "name": "Priya Verma", "din": "09876544" }
+    ]
+  },
+  "profile": {
+    "name": "Rahul",
+    "email": "rahul@acmetech.in",
+    "phone": "+91 98765 43210"
+  }
+}
