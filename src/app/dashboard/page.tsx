@@ -8,121 +8,109 @@ import company from "@/data/company.json";
 import health from "@/data/health.json";
 import deadlines from "@/data/deadlines.json";
 
-// Only show the next 30 days for the dashboard panel
 const THIRTY_DAYS_MS = 30 * 24 * 60 * 60 * 1000;
 const upcomingDeadlines = deadlines
   .filter((d) => {
     if (d.status === "overdue") return true;
     const due = new Date(d.dueDate).getTime();
-    const now = Date.now();
-    return due - now <= THIRTY_DAYS_MS;
+    return due - Date.now() <= THIRTY_DAYS_MS;
   })
   .sort((a, b) => a.daysLeft - b.daysLeft);
 
+type Status = "green" | "yellow" | "red";
+
 export default function DashboardPage() {
   const { modules, overall } = health;
+
+  const moduleList = [
+    { ...modules.gst, type: "gst" as const, href: "/gst" },
+    { ...modules.tds, type: "tds" as const, href: "/tds" },
+    { ...modules.roc, type: "roc" as const, href: "/roc" },
+  ];
 
   return (
     <div className="min-h-screen bg-muted/30">
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-8">
+      <main className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 space-y-6">
 
         {/* Greeting */}
-        <div>
-          <h1 className="text-2xl font-bold tracking-tight">
-            Hey {company.profile.name}, here&apos;s where you stand today 👋
-          </h1>
-          <p className="text-muted-foreground mt-1 text-sm">
-            {company.gstin.businessName} &nbsp;·&nbsp; GSTIN {company.gstin.number} &nbsp;·&nbsp; {company.gstin.state}
-          </p>
-        </div>
-
-        {/* Top section: Health Score + Module Cards */}
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-
-          {/* Health Score */}
-          <Card className="lg:col-span-1 flex flex-col items-center justify-center py-6">
-            <CardHeader className="pb-2 text-center">
-              <CardTitle className="text-base font-semibold">Compliance Health</CardTitle>
-              <p className="text-xs text-muted-foreground mt-0.5">Across GST · TDS · ROC</p>
-            </CardHeader>
-            <CardContent>
-              <HealthScoreGauge
-                overall={overall}
-                modules={{
-                  gst: { ...modules.gst, status: modules.gst.status as "green" | "yellow" | "red" },
-                  tds: { ...modules.tds, status: modules.tds.status as "green" | "yellow" | "red" },
-                  roc: { ...modules.roc, status: modules.roc.status as "green" | "yellow" | "red" },
-                }}
-              />
-            </CardContent>
-          </Card>
-
-          {/* Module Cards */}
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <ModuleCard
-              label={modules.gst.label}
-              type="gst"
-              score={modules.gst.score}
-              status={modules.gst.status as "green" | "yellow" | "red"}
-              summary={modules.gst.summary}
-              nextAction={modules.gst.nextAction}
-              nextDue={modules.gst.nextDue}
-              href="/gst"
-            />
-            <ModuleCard
-              label={modules.tds.label}
-              type="tds"
-              score={modules.tds.score}
-              status={modules.tds.status as "green" | "yellow" | "red"}
-              summary={modules.tds.summary}
-              nextAction={modules.tds.nextAction}
-              nextDue={modules.tds.nextDue}
-              href="/tds"
-            />
-            <ModuleCard
-              label={modules.roc.label}
-              type="roc"
-              score={modules.roc.score}
-              status={modules.roc.status as "green" | "yellow" | "red"}
-              summary={modules.roc.summary}
-              nextAction={modules.roc.nextAction}
-              nextDue={modules.roc.nextDue}
-              href="/roc"
-            />
+        <div className="flex items-start justify-between">
+          <div>
+            <h1 className="text-2xl font-bold tracking-tight">
+              Hey {company.profile.name} 👋
+            </h1>
+            <p className="text-muted-foreground mt-0.5 text-sm">
+              {company.gstin.businessName} · GSTIN {company.gstin.number} · {company.gstin.state}
+            </p>
           </div>
         </div>
 
-        {/* Upcoming Deadlines */}
+        {/* ── Compliance Overview Card ── */}
+        <Card className="overflow-hidden">
+          <div className="flex flex-col lg:flex-row">
+
+            {/* Left: Health Score */}
+            <div className="flex flex-col items-center justify-center gap-1 px-8 py-6 lg:w-64 lg:border-r shrink-0 bg-muted/20">
+              <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground mb-2">
+                Compliance Health
+              </p>
+              <HealthScoreGauge
+                overall={overall}
+                modules={{
+                  gst: { ...modules.gst, status: modules.gst.status as Status },
+                  tds: { ...modules.tds, status: modules.tds.status as Status },
+                  roc: { ...modules.roc, status: modules.roc.status as Status },
+                }}
+              />
+            </div>
+
+            {/* Right: Module rows */}
+            <div className="flex-1 flex flex-col justify-center divide-y px-6 py-2">
+              <div className="flex items-center gap-4 pb-2 px-1">
+                <span className="w-16 shrink-0 text-xs font-semibold text-muted-foreground uppercase tracking-wide">Module</span>
+                <span className="flex-1 text-xs font-semibold text-muted-foreground uppercase tracking-wide">Score</span>
+                <span className="w-12 shrink-0" />
+                <span className="w-32 shrink-0 hidden sm:block text-xs font-semibold text-muted-foreground uppercase tracking-wide">Status</span>
+                <span className="flex-1 hidden lg:block text-xs font-semibold text-muted-foreground uppercase tracking-wide">Next Action</span>
+                <span className="w-16 shrink-0" />
+              </div>
+              {moduleList.map((mod) => (
+                <ModuleCard
+                  key={mod.type}
+                  label={mod.label}
+                  type={mod.type}
+                  score={mod.score}
+                  status={mod.status as Status}
+                  summary={mod.summary}
+                  nextAction={mod.nextAction}
+                  nextDue={mod.nextDue}
+                  href={mod.href}
+                />
+              ))}
+            </div>
+          </div>
+        </Card>
+
+        {/* ── Upcoming Deadlines ── */}
         <Card>
-          <CardHeader className="pb-3">
+          <CardHeader className="pb-0 pt-4 px-6">
             <div className="flex items-center justify-between">
               <div>
                 <CardTitle className="text-base font-semibold">Upcoming Deadlines</CardTitle>
-                <p className="text-xs text-muted-foreground mt-0.5">
-                  Overdue items + next 30 days
-                </p>
+                <p className="text-xs text-muted-foreground mt-0.5">Overdue items + next 30 days</p>
               </div>
               <div className="flex items-center gap-4 text-xs text-muted-foreground">
-                <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-blue-500" /> GST
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-orange-500" /> TDS
-                </span>
-                <span className="flex items-center gap-1.5">
-                  <span className="h-2 w-2 rounded-full bg-purple-500" /> ROC
-                </span>
+                <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-blue-500" />GST</span>
+                <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-orange-500" />TDS</span>
+                <span className="flex items-center gap-1.5"><span className="h-2 w-2 rounded-full bg-purple-500" />ROC</span>
               </div>
             </div>
           </CardHeader>
-          <Separator />
-          <CardContent className="pt-4 space-y-2">
+          <Separator className="mt-4" />
+          <CardContent className="pt-3 pb-4 px-6 space-y-1.5">
             {upcomingDeadlines.length === 0 ? (
-              <p className="text-sm text-muted-foreground text-center py-8">
-                No deadlines in the next 30 days 🎉
-              </p>
+              <p className="text-sm text-muted-foreground text-center py-8">No deadlines in the next 30 days 🎉</p>
             ) : (
               upcomingDeadlines.map((d) => (
                 <DeadlineCard key={d.id} deadline={d as Parameters<typeof DeadlineCard>[0]["deadline"]} />
@@ -135,3 +123,4 @@ export default function DashboardPage() {
     </div>
   );
 }
+

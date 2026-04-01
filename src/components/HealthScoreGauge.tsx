@@ -29,10 +29,10 @@ function getColor(score: number): string {
   return STATUS_COLORS.red;
 }
 
-function getLabel(score: number): { text: string; color: string } {
-  if (score >= 70) return { text: "Good Shape", color: "text-green-600" };
-  if (score >= 40) return { text: "Needs Attention", color: "text-yellow-600" };
-  return { text: "Urgent Action", color: "text-red-600" };
+function getLabel(score: number): { text: string; color: string; bg: string; border: string } {
+  if (score >= 70) return { text: "Good Shape",      color: "text-green-700",  bg: "bg-green-100",  border: "border-green-300" };
+  if (score >= 40) return { text: "Needs Attention", color: "text-yellow-700", bg: "bg-yellow-100", border: "border-yellow-300" };
+  return             { text: "Urgent Action",    color: "text-red-700",    bg: "bg-red-100",    border: "border-red-300" };
 }
 
 export default function HealthScoreGauge({ overall, modules }: HealthScoreGaugeProps) {
@@ -47,20 +47,20 @@ export default function HealthScoreGauge({ overall, modules }: HealthScoreGaugeP
     { name: "TDS", value: modules.tds.score, fill: getColor(modules.tds.score) },
   ];
 
-  const { text, color } = getLabel(overall);
+  const { text, color, bg, border } = getLabel(overall);
 
   return (
-    <div className="flex flex-col items-center gap-6">
+    <div className="flex flex-col items-center gap-4">
       {/* Radial rings + center score */}
-      <div className="relative h-[220px] w-[220px]">
+      <div className="relative h-[200px] w-[200px]">
         <RadialBarChart
-          width={220}
-          height={220}
-          cx={110}
-          cy={110}
-          innerRadius="45%"
-          outerRadius="90%"
-          barSize={14}
+          width={200}
+          height={200}
+          cx={100}
+          cy={100}
+          innerRadius="52%"
+          outerRadius="88%"
+          barSize={7}
           data={chartData}
           startAngle={225}
           endAngle={-45}
@@ -68,21 +68,26 @@ export default function HealthScoreGauge({ overall, modules }: HealthScoreGaugeP
           <RadialBar
             background={{ fill: "#f1f5f9" }}
             dataKey="value"
-            cornerRadius={6}
+            cornerRadius={4}
             max={100}
           />
         </RadialBarChart>
 
-        {/* Center overlay */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+        {/* Center: just the number */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
           <span
             className="text-5xl font-bold tabular-nums leading-none"
             style={{ color: getColor(overall) }}
           >
             {overall}
           </span>
-          <span className={`text-xs font-semibold mt-1 ${color}`}>{text}</span>
-          <span className="text-[10px] text-muted-foreground mt-0.5">Health Score</span>
+        </div>
+
+        {/* Bottom of arc: status tag — sits in the gap between arc endpoints */}
+        <div className="absolute bottom-2 left-0 right-0 flex justify-center pointer-events-none">
+          <span className={`inline-flex items-center rounded-full border px-2.5 py-0.5 text-[11px] font-semibold ${color} ${bg} ${border}`}>
+            {text}
+          </span>
         </div>
       </div>
 

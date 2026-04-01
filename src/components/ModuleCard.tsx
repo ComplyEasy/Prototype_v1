@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { Progress } from "@/components/ui/progress";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
@@ -17,12 +17,6 @@ interface ModuleCardProps {
   href: string;
 }
 
-const STATUS_BG: Record<string, string> = {
-  green: "bg-green-50 border-green-200",
-  yellow: "bg-yellow-50 border-yellow-200",
-  red: "bg-red-50 border-red-200",
-};
-
 const STATUS_SCORE: Record<string, string> = {
   green: "text-green-600",
   yellow: "text-yellow-600",
@@ -30,9 +24,9 @@ const STATUS_SCORE: Record<string, string> = {
 };
 
 const STATUS_PILL: Record<string, string> = {
-  green: "bg-green-100 text-green-700 border-green-200",
-  yellow: "bg-yellow-100 text-yellow-700 border-yellow-200",
-  red: "bg-red-100 text-red-700 border-red-200",
+  green: "bg-green-100 text-green-700",
+  yellow: "bg-yellow-100 text-yellow-700",
+  red: "bg-red-100 text-red-700",
 };
 
 const STATUS_LABEL: Record<string, string> = {
@@ -41,7 +35,13 @@ const STATUS_LABEL: Record<string, string> = {
   red: "Action Required",
 };
 
-const TYPE_ACCENT: Record<string, string> = {
+const STATUS_BAR: Record<string, string> = {
+  green: "[&>div]:bg-green-500",
+  yellow: "[&>div]:bg-yellow-500",
+  red: "[&>div]:bg-red-500",
+};
+
+const TYPE_DOT: Record<string, string> = {
   gst: "bg-blue-500",
   tds: "bg-orange-500",
   roc: "bg-purple-500",
@@ -63,49 +63,48 @@ export default function ModuleCard({
   });
 
   return (
-    <Card className={`border ${STATUS_BG[status]} relative overflow-hidden`}>
-      {/* top accent line */}
-      <div className={`absolute top-0 left-0 right-0 h-1 ${TYPE_ACCENT[type]}`} />
+    <div className="flex items-center gap-4 py-3.5 px-1">
+      {/* Label + dot */}
+      <div className="w-16 shrink-0 flex items-center gap-2">
+        <span className={`h-2.5 w-2.5 rounded-full shrink-0 ${TYPE_DOT[type]}`} />
+        <span className="text-sm font-semibold">{label}</span>
+      </div>
 
-      <CardHeader className="pb-2 pt-5">
-        <div className="flex items-start justify-between">
-          <div>
-            <p className="text-xs font-medium uppercase tracking-wider text-muted-foreground">
-              {label}
-            </p>
-            <p className={`text-3xl font-bold tabular-nums mt-0.5 ${STATUS_SCORE[status]}`}>
-              {score}
-              <span className="text-sm font-normal text-muted-foreground ml-0.5">/100</span>
-            </p>
-          </div>
-          <span
-            className={`rounded-full border px-2.5 py-0.5 text-xs font-medium ${STATUS_PILL[status]}`}
-          >
-            {STATUS_LABEL[status]}
-          </span>
-        </div>
-      </CardHeader>
+      {/* Progress bar + score */}
+      <div className="flex-1 min-w-0 space-y-1">
+        <Progress value={score} className={cn("h-2", STATUS_BAR[status])} />
+        <p className="text-xs text-muted-foreground truncate">{summary}</p>
+      </div>
 
-      <CardContent className="pb-4 space-y-3">
-        <p className="text-xs text-muted-foreground">{summary}</p>
+      {/* Score */}
+      <div className="w-12 shrink-0 text-center">
+        <span className={`text-xl font-bold tabular-nums ${STATUS_SCORE[status]}`}>{score}</span>
+        <span className="text-[10px] text-muted-foreground block -mt-0.5">/100</span>
+      </div>
 
-        <div className="rounded-md bg-white/70 border px-3 py-2">
-          <p className="text-xs text-muted-foreground">Next action</p>
-          <p className="text-sm font-medium mt-0.5">{nextAction}</p>
-          <p className="text-xs text-muted-foreground mt-0.5">Due {formattedDate}</p>
-        </div>
+      {/* Status pill */}
+      <div className="w-32 shrink-0 hidden sm:block">
+        <span className={`rounded-full px-2.5 py-0.5 text-xs font-medium ${STATUS_PILL[status]}`}>
+          {STATUS_LABEL[status]}
+        </span>
+      </div>
 
-        <Link
-          href={href}
-          className={cn(
-            buttonVariants({ variant: "ghost", size: "sm" }),
-            "w-full justify-between h-8 text-xs"
-          )}
-        >
-          View {label} details
-          <ArrowRight className="h-3.5 w-3.5" />
-        </Link>
-      </CardContent>
-    </Card>
+      {/* Next action */}
+      <div className="flex-1 min-w-0 hidden lg:block">
+        <p className="text-sm font-medium truncate">{nextAction}</p>
+        <p className="text-xs text-muted-foreground">Due {formattedDate}</p>
+      </div>
+
+      {/* CTA */}
+      <Link
+        href={href}
+        className={cn(
+          buttonVariants({ variant: "outline", size: "sm" }),
+          "shrink-0 h-7 text-xs gap-1"
+        )}
+      >
+        View <ArrowRight className="h-3 w-3" />
+      </Link>
+    </div>
   );
 }

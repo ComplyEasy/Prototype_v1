@@ -52,7 +52,7 @@ export default function DeadlineCard({ deadline }: DeadlineCardProps) {
 
   return (
     <div
-      className={`flex items-center justify-between gap-3 rounded-lg border px-4 py-3 transition-colors hover:bg-muted/40 ${
+      className={`flex items-center justify-between gap-3 rounded-lg border px-4 py-2.5 transition-colors hover:bg-muted/40 ${
         deadline.status === "overdue" ? "border-destructive/30 bg-destructive/5" :
         deadline.status === "urgent" ? "border-yellow-300/60 bg-yellow-50/50" : ""
       }`}
