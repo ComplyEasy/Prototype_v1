@@ -35,11 +35,7 @@ const STATUS_LABEL: Record<string, string> = {
   red: "Action Required",
 };
 
-const STATUS_BAR: Record<string, string> = {
-  green: "[&>div]:bg-green-500",
-  yellow: "[&>div]:bg-yellow-500",
-  red: "[&>div]:bg-red-500",
-};
+
 
 const TYPE_DOT: Record<string, string> = {
   gst: "bg-blue-500",
@@ -72,7 +68,7 @@ export default function ModuleCard({
 
       {/* Progress bar + score */}
       <div className="flex-1 min-w-0 space-y-1">
-        <Progress value={score} className={cn("h-2", STATUS_BAR[status])} />
+        <Progress value={score} className="h-2" />
         <p className="text-xs text-muted-foreground truncate">{summary}</p>
       </div>
 
