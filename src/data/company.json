@@ -21,8 +21,15 @@
     ]
   },
   "profile": {
-    "name": "Rahul",
+    "name": "Rahul Sharma",
+    "role": "Founder",
     "email": "rahul@acmetech.in",
-    "phone": "+91 98765 43210"
-  }
+    "phone": "9876543210",
+    "notifications": "WhatsApp"
+  },
+  "tan": "MUMD12345A",
+  "pan": "AABCU9603R",
+  "industry": "SaaS / Software",
+  "annualTurnover": "₹20L–₹1.5Cr",
+  "agmDate": "2025-09-30"
 }

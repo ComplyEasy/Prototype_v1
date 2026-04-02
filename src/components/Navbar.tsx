@@ -27,7 +27,7 @@ import NotificationPanel, { type NotificationItem } from "@/components/Notificat
 
 const NAV_LINKS = [
   { href: "/dashboard", label: "Dashboard" },
-  { href: "/gst", label: "GST" },
+  { href: "/dashboard/gst", label: "GST" },
   { href: "/tds", label: "TDS" },
   { href: "/roc", label: "ROC / MCA21" },
   { href: "/exemptions", label: "Exemptions" },

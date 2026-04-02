@@ -23,7 +23,7 @@ export default function DashboardPage() {
   const { modules, overall } = health;
 
   const moduleList = [
-    { ...modules.gst, type: "gst" as const, href: "/gst" },
+    { ...modules.gst, type: "gst" as const, href: "/dashboard/gst" },
     { ...modules.tds, type: "tds" as const, href: "/tds" },
     { ...modules.roc, type: "roc" as const, href: "/roc" },
   ];

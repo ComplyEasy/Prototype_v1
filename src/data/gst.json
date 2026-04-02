@@ -1,0 +1,105 @@
+{
+  "periods": [
+    {
+      "year": 2025,
+      "month": 3,
+      "label": "March 2025",
+      "gstr1": {
+        "status": "draft",
+        "dueDate": "2025-04-11",
+        "filedDate": null,
+        "arn": null,
+        "totals": {
+          "taxableValue": 1250000,
+          "igst": 112500,
+          "cgst": 45000,
+          "sgst": 45000,
+          "cess": 0
+        }
+      },
+      "gstr3b": {
+        "status": "blocked",
+        "dueDate": "2025-04-20",
+        "filedDate": null,
+        "arn": null
+      }
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "label": "February 2025",
+      "gstr1": {
+        "status": "filed",
+        "dueDate": "2025-03-11",
+        "filedDate": "2025-03-10",
+        "arn": "AA271125073155R",
+        "totals": {
+          "taxableValue": 980000,
+          "igst": 88200,
+          "cgst": 35280,
+          "sgst": 35280,
+          "cess": 0
+        }
+      },
+      "gstr3b": {
+        "status": "filed",
+        "dueDate": "2025-03-20",
+        "filedDate": "2025-03-18",
+        "arn": "AA271125073156S"
+      }
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "label": "January 2025",
+      "gstr1": {
+        "status": "filed",
+        "dueDate": "2025-02-11",
+        "filedDate": "2025-02-09",
+        "arn": "AA270125073091R",
+        "totals": {
+          "taxableValue": 1100000,
+          "igst": 99000,
+          "cgst": 39600,
+          "sgst": 39600,
+          "cess": 0
+        }
+      },
+      "gstr3b": {
+        "status": "filed",
+        "dueDate": "2025-02-20",
+        "filedDate": "2025-02-19",
+        "arn": "AA270125073092S"
+      }
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "label": "December 2024",
+      "gstr1": {
+        "status": "filed",
+        "dueDate": "2025-01-11",
+        "filedDate": "2025-01-10",
+        "arn": "AA271224073044R",
+        "totals": {
+          "taxableValue": 870000,
+          "igst": 78300,
+          "cgst": 31320,
+          "sgst": 31320,
+          "cess": 0
+        }
+      },
+      "gstr3b": {
+        "status": "filed",
+        "dueDate": "2025-01-20",
+        "filedDate": "2025-01-18",
+        "arn": "AA271224073045S"
+      }
+    }
+  ],
+  "ledger": {
+    "cash": { "igst": 8000, "cgst": 2000, "sgst": 2000, "cess": 0 },
+    "itc": { "igst": 38500, "cgst": 12000, "sgst": 12000, "cess": 0 },
+    "liability": { "igst": 112500, "cgst": 45000, "sgst": 45000, "cess": 0 }
+  }
+}

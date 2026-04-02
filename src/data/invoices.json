@@ -1,0 +1,203 @@
+{
+  "b2b": [
+    {
+      "id": "inv_001",
+      "receiverGstin": "07AAGCM8702N1Z3",
+      "receiverName": "Metro Distributors Pvt Ltd",
+      "invoiceNumber": "INV-2025-001",
+      "invoiceDate": "2025-03-03",
+      "invoiceValue": 141600,
+      "placeOfSupply": "07",
+      "reverseCharge": false,
+      "invoiceType": "Regular",
+      "rate": 18,
+      "taxableValue": 120000,
+      "igst": 21600,
+      "cgst": 0,
+      "sgst": 0,
+      "cess": 0
+    },
+    {
+      "id": "inv_002",
+      "receiverGstin": "19AAHCS4321B1ZV",
+      "receiverName": "Sunrise Tech Solutions",
+      "invoiceNumber": "INV-2025-002",
+      "invoiceDate": "2025-03-10",
+      "invoiceValue": 236000,
+      "placeOfSupply": "19",
+      "reverseCharge": false,
+      "invoiceType": "Regular",
+      "rate": 18,
+      "taxableValue": 200000,
+      "igst": 36000,
+      "cgst": 0,
+      "sgst": 0,
+      "cess": 0
+    },
+    {
+      "id": "inv_003",
+      "receiverGstin": "29AABCU9603R1ZX",
+      "receiverName": "CloudBase Innovations Pvt Ltd",
+      "invoiceNumber": "INV-2025-003",
+      "invoiceDate": "2025-03-14",
+      "invoiceValue": 354000,
+      "placeOfSupply": "27",
+      "reverseCharge": false,
+      "invoiceType": "Regular",
+      "rate": 18,
+      "taxableValue": 300000,
+      "igst": 0,
+      "cgst": 27000,
+      "sgst": 27000,
+      "cess": 0
+    },
+    {
+      "id": "inv_004",
+      "receiverGstin": "06AAHCE1234D1Z5",
+      "receiverName": "Horizon Retail Ltd",
+      "invoiceNumber": "INV-2025-004",
+      "invoiceDate": "2025-03-20",
+      "invoiceValue": 94400,
+      "placeOfSupply": "06",
+      "reverseCharge": false,
+      "invoiceType": "Regular",
+      "rate": 18,
+      "taxableValue": 80000,
+      "igst": 14400,
+      "cgst": 0,
+      "sgst": 0,
+      "cess": 0
+    },
+    {
+      "id": "inv_005",
+      "receiverGstin": "33AAGCA5678F1ZQ",
+      "receiverName": "Apex Consulting Services",
+      "invoiceNumber": "INV-2025-005",
+      "invoiceDate": "2025-03-25",
+      "invoiceValue": 70800,
+      "placeOfSupply": "33",
+      "reverseCharge": false,
+      "invoiceType": "Regular",
+      "rate": 18,
+      "taxableValue": 60000,
+      "igst": 10800,
+      "cgst": 0,
+      "sgst": 0,
+      "cess": 0
+    }
+  ],
+  "b2cl": [
+    {
+      "id": "b2cl_001",
+      "invoiceNumber": "INV-2025-010",
+      "invoiceDate": "2025-03-15",
+      "invoiceValue": 310000,
+      "placeOfSupply": "06",
+      "rate": 18,
+      "taxableValue": 262712,
+      "igst": 47288,
+      "cess": 0
+    },
+    {
+      "id": "b2cl_002",
+      "invoiceNumber": "INV-2025-011",
+      "invoiceDate": "2025-03-22",
+      "invoiceValue": 413000,
+      "placeOfSupply": "09",
+      "rate": 18,
+      "taxableValue": 350000,
+      "igst": 63000,
+      "cess": 0
+    }
+  ],
+  "b2cs": [
+    {
+      "rate": 18,
+      "placeOfSupply": "27",
+      "taxableValue": 150000,
+      "cgst": 13500,
+      "sgst": 13500,
+      "cess": 0
+    },
+    {
+      "rate": 12,
+      "placeOfSupply": "27",
+      "taxableValue": 80000,
+      "cgst": 4800,
+      "sgst": 4800,
+      "cess": 0
+    }
+  ],
+  "cdnr": [
+    {
+      "id": "cdn_001",
+      "receiverGstin": "07AAGCM8702N1Z3",
+      "receiverName": "Metro Distributors Pvt Ltd",
+      "noteNumber": "CN-2025-001",
+      "noteDate": "2025-03-20",
+      "noteType": "Credit",
+      "placeOfSupply": "07",
+      "noteValue": 11800,
+      "rate": 18,
+      "taxableValue": 10000,
+      "igst": 1800,
+      "cgst": 0,
+      "sgst": 0,
+      "cess": 0
+    }
+  ],
+  "hsn": [
+    {
+      "hsnCode": "998314",
+      "description": "IT consulting and support services",
+      "uqc": "OTH",
+      "quantity": 1,
+      "totalValue": 1252712,
+      "rate": 18,
+      "taxableValue": 1252712,
+      "igst": 145588,
+      "cgst": 54000,
+      "sgst": 54000,
+      "cess": 0
+    }
+  ],
+  "gstr3b": {
+    "sup_details": {
+      "osup_det": { "txval": 1252712, "iamt": 145588, "camt": 54000, "samt": 54000, "csamt": 0 },
+      "osup_zero": { "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+      "osup_nil_exmp": { "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+      "isup_rev": { "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+      "osup_nongst": { "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+    },
+    "itc_elg": {
+      "itc_avl": [
+        { "ty": "IMPG", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "IMPS", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "ISRC", "iamt": 38500, "camt": 12000, "samt": 12000, "csamt": 0 },
+        { "ty": "ISD", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "OTH", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+      ],
+      "itc_rev": [
+        { "ty": "RUL42", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "RUL43", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "OTH", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+      ],
+      "itc_net": { "iamt": 38500, "camt": 12000, "samt": 12000, "csamt": 0 },
+      "itc_inelg": [
+        { "ty": "RUL17-5", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "OTH", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+      ]
+    },
+    "inward_sup": {
+      "isup_details": [
+        { "ty": "GST", "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 },
+        { "ty": "NONGST", "txval": 0, "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+      ]
+    },
+    "intr_ltfee": {
+      "intr_details": [
+        { "ty": "3B", "iamt": 0, "camt": 0, "samt": 0, "csamt": 0 }
+      ]
+    }
+  }
+}
