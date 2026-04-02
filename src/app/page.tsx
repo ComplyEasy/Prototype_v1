@@ -293,7 +293,7 @@ function PricingSection() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-3">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6 overflow-visible pt-4 sm:grid-cols-3">
           {/* Starter */}
           <Card className="relative flex flex-col">
             <CardHeader>
@@ -327,11 +327,11 @@ function PricingSection() {
           </Card>
 
           {/* Growth — highlighted */}
-          <Card className="relative flex flex-col ring-2 ring-foreground">
-            <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <Badge className="px-3">Most Popular</Badge>
+          <Card className="relative flex flex-col ring-2 ring-foreground mt-0">
+            <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-10">
+              <Badge className="px-3 shadow-sm">Most Popular</Badge>
             </div>
-            <CardHeader>
+            <CardHeader className="pt-7">
               <CardTitle className="text-lg">Growth</CardTitle>
               <CardDescription>Early-stage funded startups</CardDescription>
             </CardHeader>
