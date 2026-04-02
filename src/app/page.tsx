@@ -286,71 +286,111 @@ function PricingSection() {
         <div className="text-center">
           <Badge variant="outline" className="mb-4">Pricing</Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Free while you&apos;re small
+            Simple, transparent pricing
           </h2>
           <p className="mx-auto mt-4 max-w-lg text-muted-foreground">
-            Start free. Upgrade when your startup scales. No surprise fees.
+            Pick a plan that fits your stage. Upgrade or downgrade anytime — no lock-ins.
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-4xl gap-6 sm:grid-cols-2">
-          <Card className="relative">
+        <div className="mx-auto mt-12 grid max-w-5xl gap-6 sm:grid-cols-3">
+          {/* Starter */}
+          <Card className="relative flex flex-col">
             <CardHeader>
               <CardTitle className="text-lg">Starter</CardTitle>
-              <CardDescription>For early-stage startups</CardDescription>
+              <CardDescription>Solo founders &amp; idea stage</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="flex flex-1 flex-col space-y-4">
               <div>
-                <span className="text-4xl font-bold">₹0</span>
+                <span className="text-4xl font-bold">₹1,499</span>
                 <span className="text-muted-foreground">/month</span>
               </div>
               <Separator />
-              <ul className="space-y-3 text-sm">
-                {["GST filing dashboard", "Deadline alerts", "Up to 1 company", "Email support"].map(
-                  (item) => (
-                    <li key={item} className="flex items-center gap-2">
-                      <CheckCircle2 className="size-4 text-emerald-500" />
-                      {item}
-                    </li>
-                  )
-                )}
+              <ul className="flex-1 space-y-3 text-sm">
+                {[
+                  "GST filing dashboard",
+                  "Smart deadline alerts",
+                  "1 company",
+                  "CA request (2/month)",
+                  "Email support",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <CheckCircle2 className="size-4 shrink-0 text-emerald-500" />
+                    {item}
+                  </li>
+                ))}
               </ul>
-              <Link href="/onboarding" className={cn(buttonVariants({ variant: "outline" }), "w-full")}>
+              <Link href="/onboarding" className={cn(buttonVariants({ variant: "outline" }), "mt-auto w-full")}>
                 Get started
               </Link>
             </CardContent>
           </Card>
 
-          <Card className="relative ring-2 ring-foreground">
+          {/* Growth — highlighted */}
+          <Card className="relative flex flex-col ring-2 ring-foreground">
             <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-              <Badge className="px-3">Popular</Badge>
+              <Badge className="px-3">Most Popular</Badge>
             </div>
             <CardHeader>
-              <CardTitle className="text-lg">Pro</CardTitle>
-              <CardDescription>For growing startups</CardDescription>
+              <CardTitle className="text-lg">Growth</CardTitle>
+              <CardDescription>Early-stage funded startups</CardDescription>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="flex flex-1 flex-col space-y-4">
               <div>
-                <span className="text-4xl font-bold">₹999</span>
+                <span className="text-4xl font-bold">₹3,999</span>
                 <span className="text-muted-foreground">/month</span>
               </div>
               <Separator />
-              <ul className="space-y-3 text-sm">
+              <ul className="flex-1 space-y-3 text-sm">
                 {[
                   "Everything in Starter",
                   "TDS + ROC modules",
-                  "CA request system",
                   "Up to 3 companies",
+                  "CA request (10/month)",
+                  "Compliance health score",
                   "Priority support",
                 ].map((item) => (
                   <li key={item} className="flex items-center gap-2">
-                    <CheckCircle2 className="size-4 text-emerald-500" />
+                    <CheckCircle2 className="size-4 shrink-0 text-emerald-500" />
                     {item}
                   </li>
                 ))}
               </ul>
-              <Link href="/onboarding" className={cn(buttonVariants(), "w-full")}>
+              <Link href="/onboarding" className={cn(buttonVariants(), "mt-auto w-full")}>
                 Start free trial
+              </Link>
+            </CardContent>
+          </Card>
+
+          {/* Scale */}
+          <Card className="relative flex flex-col">
+            <CardHeader>
+              <CardTitle className="text-lg">Scale</CardTitle>
+              <CardDescription>Series A &amp; beyond</CardDescription>
+            </CardHeader>
+            <CardContent className="flex flex-1 flex-col space-y-4">
+              <div>
+                <span className="text-4xl font-bold">₹9,999</span>
+                <span className="text-muted-foreground">/month</span>
+              </div>
+              <Separator />
+              <ul className="flex-1 space-y-3 text-sm">
+                {[
+                  "Everything in Growth",
+                  "Unlimited companies",
+                  "Dedicated CA manager",
+                  "Unlimited CA requests",
+                  "Custom compliance reports",
+                  "SLA-backed support",
+                ].map((item) => (
+                  <li key={item} className="flex items-center gap-2">
+                    <CheckCircle2 className="size-4 shrink-0 text-emerald-500" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+              <Link href="/onboarding" className={cn(buttonVariants({ variant: "outline" }), "mt-auto w-full")}>
+                Talk to us
               </Link>
             </CardContent>
           </Card>
