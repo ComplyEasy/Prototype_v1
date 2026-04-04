@@ -1,0 +1,347 @@
+{
+  "company": {
+    "cin": "U74110KA2021PTC123456",
+    "company_name": "Acme Technologies Private Limited",
+    "company_status": "Active",
+    "company_category": "Company limited by Shares",
+    "company_subcategory": "Non-govt company",
+    "class_of_company": "Private",
+    "roc_code": "RoC-Bangalore",
+    "date_of_incorporation": "2021-03-15",
+    "date_of_last_agm": "2024-09-28",
+    "date_of_balance_sheet": "2024-03-31",
+    "active_compliance": "Active",
+    "authorized_capital": 1000000,
+    "paidup_capital": 498000,
+    "shares_issued": 4980,
+    "face_value_per_share": 100,
+    "registered_address": "42, 4th Floor, Koramangala, Bangalore - 560034, Karnataka",
+    "email": "compliance@acmetechnologies.in",
+    "charges": []
+  },
+  "directors": [
+    {
+      "din": "03272782",
+      "name": "Rahul Mehta",
+      "pan": "ABRPM1234C",
+      "designation": "Managing Director",
+      "begin_date": "2021-03-15",
+      "din_verified": true,
+      "dir3_kyc_status": "Filed",
+      "dir3_kyc_last_filed": "2024-09-15",
+      "dir3_kyc_next_due": "2025-09-30",
+      "other_directorships": [
+        {
+          "company_name": "Rahul Ventures LLP",
+          "cin_llpin": "AAB-1234",
+          "designation": "Partner",
+          "begin_date": "2019-06-01",
+          "end_date": null
+        },
+        {
+          "company_name": "Nexus Infra Private Limited",
+          "cin_llpin": "U45200KA2018PTC098765",
+          "designation": "Director",
+          "begin_date": "2018-11-20",
+          "end_date": "2023-04-30"
+        }
+      ]
+    },
+    {
+      "din": "07654321",
+      "name": "Priya Sharma",
+      "pan": "BKRPS5678D",
+      "designation": "Director",
+      "begin_date": "2022-06-01",
+      "din_verified": true,
+      "dir3_kyc_status": "Pending",
+      "dir3_kyc_last_filed": "2023-09-20",
+      "dir3_kyc_next_due": "2025-09-30",
+      "other_directorships": []
+    },
+    {
+      "din": "09876543",
+      "name": "Ankit Jain",
+      "pan": "CFGAJ9012E",
+      "designation": "Director",
+      "begin_date": "2023-01-10",
+      "din_verified": false,
+      "dir3_kyc_status": "Filed",
+      "dir3_kyc_last_filed": "2024-08-30",
+      "dir3_kyc_next_due": "2025-09-30",
+      "other_directorships": [
+        {
+          "company_name": "Jain Capital Services Private Limited",
+          "cin_llpin": "U67190MH2020PTC345678",
+          "designation": "Director",
+          "begin_date": "2020-03-01",
+          "end_date": null
+        }
+      ]
+    }
+  ],
+  "filings": [
+    {
+      "id": "aoc4-fy2425",
+      "form": "AOC-4",
+      "plain_label": "Financial Statements",
+      "description": "Submit your Balance Sheet, Profit & Loss account, and auditor's report to the Ministry of Corporate Affairs.",
+      "section": "Section 137, Companies Act 2013",
+      "financial_year": "FY 2024-25",
+      "due_date": "2024-10-28",
+      "agm_date": "2024-09-28",
+      "offset_days": 30,
+      "status": "Filed",
+      "filed_on": "2024-10-15",
+      "srn": "G87654321",
+      "filed_by": "CA Partner",
+      "requires_ca": true,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "Balance Sheet (signed by Director)",
+        "Profit & Loss Account",
+        "Auditor's Report",
+        "Board Resolution adopting financials",
+        "Cash Flow Statement"
+      ]
+    },
+    {
+      "id": "mgt7-fy2425",
+      "form": "MGT-7",
+      "plain_label": "Annual Return",
+      "description": "A snapshot of your company's structure as on March 31 — directors, shareholders, share capital, and meetings held during the year.",
+      "section": "Section 92, Companies Act 2013",
+      "financial_year": "FY 2024-25",
+      "due_date": "2024-11-29",
+      "agm_date": "2024-09-28",
+      "offset_days": 60,
+      "status": "Filed",
+      "filed_on": "2024-11-10",
+      "srn": "G12345678",
+      "filed_by": "CA Partner",
+      "requires_ca": true,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "List of shareholders with holdings",
+        "List of directors with DIN",
+        "Minutes of AGM",
+        "Board resolution authorizing filing"
+      ]
+    },
+    {
+      "id": "adt1-fy2425",
+      "form": "ADT-1",
+      "plain_label": "Auditor Appointment",
+      "description": "Formally notify the MCA of your statutory auditor's appointment or reappointment for the next 5 years.",
+      "section": "Section 139, Companies Act 2013",
+      "financial_year": "FY 2024-25",
+      "due_date": "2024-10-13",
+      "agm_date": "2024-09-28",
+      "offset_days": 15,
+      "status": "Filed",
+      "filed_on": "2024-10-05",
+      "srn": "G99887766",
+      "filed_by": "CA Partner",
+      "requires_ca": false,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "Auditor's consent letter",
+        "Board resolution appointing auditor"
+      ]
+    },
+    {
+      "id": "dir3kyc-fy2425",
+      "form": "DIR-3 KYC",
+      "plain_label": "Director KYC",
+      "description": "Annual identity verification for all directors. Every director who holds a DIN must file this by September 30 each year.",
+      "section": "Section 164, Companies Act 2013",
+      "financial_year": "FY 2024-25",
+      "due_date": "2024-09-30",
+      "agm_date": null,
+      "offset_days": null,
+      "status": "Pending",
+      "filed_on": null,
+      "srn": null,
+      "filed_by": null,
+      "requires_ca": false,
+      "late_fee_per_day": 5000,
+      "documents_required": [
+        "Aadhaar card (self-attested)",
+        "PAN card (self-attested)",
+        "Mobile number linked to Aadhaar",
+        "Personal email ID"
+      ]
+    },
+    {
+      "id": "aoc4-fy2526",
+      "form": "AOC-4",
+      "plain_label": "Financial Statements",
+      "description": "Submit your Balance Sheet, Profit & Loss account, and auditor's report to the Ministry of Corporate Affairs.",
+      "section": "Section 137, Companies Act 2013",
+      "financial_year": "FY 2025-26",
+      "due_date": "2025-10-30",
+      "agm_date": null,
+      "offset_days": 30,
+      "status": "Upcoming",
+      "filed_on": null,
+      "srn": null,
+      "filed_by": null,
+      "requires_ca": true,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "Balance Sheet (signed by Director)",
+        "Profit & Loss Account",
+        "Auditor's Report",
+        "Board Resolution adopting financials",
+        "Cash Flow Statement"
+      ]
+    },
+    {
+      "id": "mgt7-fy2526",
+      "form": "MGT-7",
+      "plain_label": "Annual Return",
+      "description": "A snapshot of your company's structure as on March 31 — directors, shareholders, share capital, and meetings held during the year.",
+      "section": "Section 92, Companies Act 2013",
+      "financial_year": "FY 2025-26",
+      "due_date": "2025-11-29",
+      "agm_date": null,
+      "offset_days": 60,
+      "status": "Upcoming",
+      "filed_on": null,
+      "srn": null,
+      "filed_by": null,
+      "requires_ca": true,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "List of shareholders with holdings",
+        "List of directors with DIN",
+        "Minutes of AGM",
+        "Board resolution authorizing filing"
+      ]
+    },
+    {
+      "id": "dir3kyc-fy2526",
+      "form": "DIR-3 KYC",
+      "plain_label": "Director KYC",
+      "description": "Annual identity verification for all directors. Every director who holds a DIN must file this by September 30 each year.",
+      "section": "Section 164, Companies Act 2013",
+      "financial_year": "FY 2025-26",
+      "due_date": "2025-09-30",
+      "agm_date": null,
+      "offset_days": null,
+      "status": "Upcoming",
+      "filed_on": null,
+      "srn": null,
+      "filed_by": null,
+      "requires_ca": false,
+      "late_fee_per_day": 5000,
+      "documents_required": [
+        "Aadhaar card (self-attested)",
+        "PAN card (self-attested)",
+        "Mobile number linked to Aadhaar",
+        "Personal email ID"
+      ]
+    },
+    {
+      "id": "adt1-fy2526",
+      "form": "ADT-1",
+      "plain_label": "Auditor Appointment",
+      "description": "Formally notify the MCA of your statutory auditor's appointment or reappointment for the next 5 years.",
+      "section": "Section 139, Companies Act 2013",
+      "financial_year": "FY 2025-26",
+      "due_date": "2025-10-15",
+      "agm_date": null,
+      "offset_days": 15,
+      "status": "Upcoming",
+      "filed_on": null,
+      "srn": null,
+      "filed_by": null,
+      "requires_ca": false,
+      "late_fee_per_day": 100,
+      "documents_required": [
+        "Auditor's consent letter",
+        "Board resolution appointing auditor"
+      ]
+    }
+  ],
+  "filingHistory": [
+    {
+      "id": "hist-aoc4-fy2425",
+      "form": "AOC-4",
+      "plain_label": "Financial Statements",
+      "financial_year": "FY 2024-25",
+      "filed_on": "2024-10-15",
+      "srn": "G87654321",
+      "filed_by": "CA Partner",
+      "mode": "Online (MCA21)",
+      "status": "Successful"
+    },
+    {
+      "id": "hist-mgt7-fy2425",
+      "form": "MGT-7",
+      "plain_label": "Annual Return",
+      "financial_year": "FY 2024-25",
+      "filed_on": "2024-11-10",
+      "srn": "G12345678",
+      "filed_by": "CA Partner",
+      "mode": "Online (MCA21)",
+      "status": "Successful"
+    },
+    {
+      "id": "hist-adt1-fy2425",
+      "form": "ADT-1",
+      "plain_label": "Auditor Appointment",
+      "financial_year": "FY 2024-25",
+      "filed_on": "2024-10-05",
+      "srn": "G99887766",
+      "filed_by": "CA Partner",
+      "mode": "Online (MCA21)",
+      "status": "Successful"
+    },
+    {
+      "id": "hist-aoc4-fy2324",
+      "form": "AOC-4",
+      "plain_label": "Financial Statements",
+      "financial_year": "FY 2023-24",
+      "filed_on": "2023-10-12",
+      "srn": "F55443322",
+      "filed_by": "CA Partner",
+      "mode": "Online (MCA21)",
+      "status": "Successful"
+    },
+    {
+      "id": "hist-mgt7-fy2324",
+      "form": "MGT-7",
+      "plain_label": "Annual Return",
+      "financial_year": "FY 2023-24",
+      "filed_on": "2023-11-20",
+      "srn": "F11223344",
+      "filed_by": "CA Partner",
+      "mode": "Online (MCA21)",
+      "status": "Successful"
+    }
+  ],
+  "documents": [
+    { "id": "doc-coi", "title": "Certificate of Incorporation", "plain_label": "Your birth certificate as a company", "status": "Available", "source": "EntityLocker" },
+    { "id": "doc-moa", "title": "Memorandum of Association (MoA)", "plain_label": "Your company's purpose charter", "status": "Available", "source": "EntityLocker" },
+    { "id": "doc-aoa", "title": "Articles of Association (AoA)", "plain_label": "Your company rulebook", "status": "Available", "source": "EntityLocker" },
+    { "id": "doc-pan", "title": "PAN Card", "plain_label": "Company Permanent Account Number", "status": "Available", "source": "EntityLocker" },
+    { "id": "doc-inc20a", "title": "INC-20A", "plain_label": "Certificate of Commencement of Business", "status": "Not Uploaded", "source": "Upload" },
+    { "id": "doc-mgt7", "title": "Latest MGT-7", "plain_label": "Last filed Annual Return", "status": "Available", "source": "Filing History" },
+    { "id": "doc-aoc4", "title": "Latest AOC-4", "plain_label": "Last filed Financial Statements", "status": "Available", "source": "Filing History" }
+  ],
+  "boardResolutionTemplates": [
+    { "id": "br-appt-dir", "title": "Appointment of Director", "description": "Adding a new director to the board", "requires_mgt14": true },
+    { "id": "br-resign-dir", "title": "Resignation of Director", "description": "Director stepping down formally", "requires_mgt14": false },
+    { "id": "br-bank-acct", "title": "Opening a New Bank Account", "description": "Authorizing a new business bank account", "requires_mgt14": false },
+    { "id": "br-auth-sig", "title": "Change of Authorized Signatory", "description": "Updating who can sign cheques and agreements", "requires_mgt14": false },
+    { "id": "br-loan", "title": "Taking a Business Loan", "description": "Formally approving borrowing from a bank or NBFC", "requires_mgt14": true },
+    { "id": "br-address", "title": "Change of Registered Office", "description": "Moving your company's official address", "requires_mgt14": false },
+    { "id": "br-shares", "title": "Issue of Shares (Equity)", "description": "Allotting new shares to investors or employees", "requires_mgt14": true },
+    { "id": "br-auditor", "title": "Appointment of Statutory Auditor", "description": "Onboarding or changing your CA firm", "requires_mgt14": false },
+    { "id": "br-financials", "title": "Adoption of Financial Statements", "description": "Signing off on annual accounts at the AGM", "requires_mgt14": false },
+    { "id": "br-dividend", "title": "Declaration of Dividend", "description": "Approving distribution of profits to shareholders", "requires_mgt14": true },
+    { "id": "br-esop", "title": "ESOP Grant", "description": "Authorizing an employee stock option grant", "requires_mgt14": true },
+    { "id": "br-auth-cap", "title": "Increase in Authorized Capital", "description": "Expanding share capital before a fundraise", "requires_mgt14": true }
+  ]
+}

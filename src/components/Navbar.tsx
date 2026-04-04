@@ -29,7 +29,7 @@ const NAV_LINKS = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/dashboard/gst", label: "GST" },
   { href: "/dashboard/tds", label: "TDS" },
-  { href: "/roc", label: "ROC / MCA21" },
+  { href: "/dashboard/roc", label: "ROC / MCA21" },
   { href: "/exemptions", label: "Exemptions" },
   { href: "/ca-requests", label: "CA Requests" },
 ];
