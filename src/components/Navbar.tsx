@@ -28,7 +28,7 @@ import NotificationPanel, { type NotificationItem } from "@/components/Notificat
 const NAV_LINKS = [
   { href: "/dashboard", label: "Dashboard" },
   { href: "/dashboard/gst", label: "GST" },
-  { href: "/tds", label: "TDS" },
+  { href: "/dashboard/tds", label: "TDS" },
   { href: "/roc", label: "ROC / MCA21" },
   { href: "/exemptions", label: "Exemptions" },
   { href: "/ca-requests", label: "CA Requests" },
@@ -56,7 +56,10 @@ export default function Navbar() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-1">
             {NAV_LINKS.map((link) => {
-              const active = pathname.startsWith(link.href);
+              const active =
+                link.href === "/dashboard"
+                  ? pathname === "/dashboard"
+                  : pathname.startsWith(link.href);
               return (
                 <Link
                   key={link.href}

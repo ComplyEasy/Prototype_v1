@@ -24,7 +24,7 @@ export default function DashboardPage() {
 
   const moduleList = [
     { ...modules.gst, type: "gst" as const, href: "/dashboard/gst" },
-    { ...modules.tds, type: "tds" as const, href: "/tds" },
+    { ...modules.tds, type: "tds" as const, href: "/dashboard/tds" },
     { ...modules.roc, type: "roc" as const, href: "/roc" },
   ];
 

@@ -1,0 +1,420 @@
+{
+  "deductor": {
+    "tan": "AHMA09719B",
+    "pan": "AABCT1332L",
+    "name": "Acme Technologies Pvt Ltd",
+    "branch": "Head Office",
+    "gstin": "27AABCU9603R1ZX",
+    "address": {
+      "street": "4th Floor, Tower B",
+      "area": "Bandra Kurla Complex",
+      "city": "Mumbai",
+      "state": "MH",
+      "postal_code": "400051"
+    },
+    "email": "finance@acmetech.in",
+    "mobile": "9820000001",
+    "responsible_person": {
+      "name": "Priya Sharma",
+      "pan": "BXYPS1234A",
+      "designation": "Finance Manager"
+    }
+  },
+  "periods": [
+    {
+      "financial_year": "FY 2025-26",
+      "quarter": "Q4",
+      "label": "Q4 FY 2025-26 (Jan–Mar 2026)",
+      "form24q": {
+        "status": "draft",
+        "dueDate": "2026-05-31",
+        "filedDate": null,
+        "receiptNumber": null,
+        "totalEmployees": 12,
+        "totalTDS": 482000,
+        "totalChallans": 4,
+        "challansDeposited": 482000
+      },
+      "form26q": {
+        "status": "draft",
+        "dueDate": "2026-05-31",
+        "filedDate": null,
+        "receiptNumber": null,
+        "totalDeductees": 28,
+        "totalTDS": 128500,
+        "totalChallans": 3,
+        "challansDeposited": 128500
+      }
+    },
+    {
+      "financial_year": "FY 2025-26",
+      "quarter": "Q3",
+      "label": "Q3 FY 2025-26 (Oct–Dec 2025)",
+      "form24q": {
+        "status": "filed",
+        "dueDate": "2026-01-31",
+        "filedDate": "2026-01-28",
+        "receiptNumber": "123456789012345",
+        "totalEmployees": 12,
+        "totalTDS": 465000,
+        "totalChallans": 4,
+        "challansDeposited": 465000
+      },
+      "form26q": {
+        "status": "filed",
+        "dueDate": "2026-01-31",
+        "filedDate": "2026-01-28",
+        "receiptNumber": "123456789012346",
+        "totalDeductees": 25,
+        "totalTDS": 112000,
+        "totalChallans": 3,
+        "challansDeposited": 112000
+      }
+    },
+    {
+      "financial_year": "FY 2025-26",
+      "quarter": "Q2",
+      "label": "Q2 FY 2025-26 (Jul–Sep 2025)",
+      "form24q": {
+        "status": "filed",
+        "dueDate": "2025-10-31",
+        "filedDate": "2025-10-29",
+        "receiptNumber": "123456789012341",
+        "totalEmployees": 11,
+        "totalTDS": 440000,
+        "totalChallans": 3,
+        "challansDeposited": 440000
+      },
+      "form26q": {
+        "status": "filed",
+        "dueDate": "2025-10-31",
+        "filedDate": "2025-10-29",
+        "receiptNumber": "123456789012342",
+        "totalDeductees": 22,
+        "totalTDS": 98500,
+        "totalChallans": 3,
+        "challansDeposited": 98500
+      }
+    },
+    {
+      "financial_year": "FY 2025-26",
+      "quarter": "Q1",
+      "label": "Q1 FY 2025-26 (Apr–Jun 2025)",
+      "form24q": {
+        "status": "filed",
+        "dueDate": "2025-07-31",
+        "filedDate": "2025-07-30",
+        "receiptNumber": "123456789012339",
+        "totalEmployees": 10,
+        "totalTDS": 410000,
+        "totalChallans": 3,
+        "challansDeposited": 410000
+      },
+      "form26q": {
+        "status": "filed",
+        "dueDate": "2025-07-31",
+        "filedDate": "2025-07-30",
+        "receiptNumber": "123456789012340",
+        "totalDeductees": 20,
+        "totalTDS": 87000,
+        "totalChallans": 2,
+        "challansDeposited": 87000
+      }
+    }
+  ],
+  "employees": [
+    {
+      "id": "emp_001",
+      "pan": "BAAPR1234A",
+      "name": "Arun Mehta",
+      "employee_category": "general",
+      "opting_new_regime": true,
+      "is_pan_operative": true,
+      "monthly_salary": 150000,
+      "annual_tds": 84000,
+      "q4_tds": 21000
+    },
+    {
+      "id": "emp_002",
+      "pan": "CAASP5678B",
+      "name": "Sunita Patil",
+      "employee_category": "women",
+      "opting_new_regime": false,
+      "is_pan_operative": true,
+      "monthly_salary": 95000,
+      "annual_tds": 42000,
+      "q4_tds": 10500
+    },
+    {
+      "id": "emp_003",
+      "pan": "DAARC9012C",
+      "name": "Rajesh Chandra",
+      "employee_category": "general",
+      "opting_new_regime": true,
+      "is_pan_operative": true,
+      "monthly_salary": 200000,
+      "annual_tds": 138000,
+      "q4_tds": 34500
+    },
+    {
+      "id": "emp_004",
+      "pan": "EAASN3456D",
+      "name": "Neeti Singh",
+      "employee_category": "general",
+      "opting_new_regime": false,
+      "is_pan_operative": true,
+      "monthly_salary": 75000,
+      "annual_tds": 18000,
+      "q4_tds": 4500
+    },
+    {
+      "id": "emp_005",
+      "pan": "FAABV7890E",
+      "name": "Vivek Bhatia",
+      "employee_category": "general",
+      "opting_new_regime": true,
+      "is_pan_operative": true,
+      "monthly_salary": 120000,
+      "annual_tds": 54000,
+      "q4_tds": 13500
+    }
+  ],
+  "challans24Q": [
+    {
+      "id": "chl_001",
+      "challan_serial": "00012",
+      "bsr_code": "0510308",
+      "paid_date": "2026-02-07",
+      "minor_head": "200",
+      "tds_amount": 120500,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    },
+    {
+      "id": "chl_002",
+      "challan_serial": "00023",
+      "bsr_code": "0510308",
+      "paid_date": "2026-03-07",
+      "minor_head": "200",
+      "tds_amount": 120500,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    },
+    {
+      "id": "chl_003",
+      "challan_serial": "00034",
+      "bsr_code": "0510308",
+      "paid_date": "2026-04-07",
+      "minor_head": "200",
+      "tds_amount": 121000,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    },
+    {
+      "id": "chl_004",
+      "challan_serial": "00045",
+      "bsr_code": "0510308",
+      "paid_date": "2026-04-30",
+      "minor_head": "200",
+      "tds_amount": 120000,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    }
+  ],
+  "challans26Q": [
+    {
+      "id": "chl26_001",
+      "challan_serial": "00056",
+      "bsr_code": "0510308",
+      "paid_date": "2026-02-07",
+      "minor_head": "200",
+      "tds_amount": 43000,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    },
+    {
+      "id": "chl26_002",
+      "challan_serial": "00067",
+      "bsr_code": "0510308",
+      "paid_date": "2026-03-07",
+      "minor_head": "200",
+      "tds_amount": 43000,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    },
+    {
+      "id": "chl26_003",
+      "challan_serial": "00078",
+      "bsr_code": "0510308",
+      "paid_date": "2026-04-30",
+      "minor_head": "200",
+      "tds_amount": 42500,
+      "surcharge": 0,
+      "health_and_education_cess": 0,
+      "interest": 0,
+      "late_filing_fees": 0,
+      "other_penalty": 0
+    }
+  ],
+  "deductees": [
+    {
+      "id": "ded_001",
+      "pan": "DAASC2468C",
+      "name": "Code Crafters Pvt Ltd",
+      "is_206ab_applicable": false,
+      "is_pan_operative": true,
+      "payments": [
+        {
+          "id": "pmt_001",
+          "challan_serial": "00056",
+          "bsr_code": "0510308",
+          "section": "194J",
+          "code": "94JB",
+          "nature": "Professional Services",
+          "payment_amount": 500000,
+          "tds_amount": 50000,
+          "tds_rate": 10,
+          "payment_date": "2026-02-15",
+          "deduction_date": "2026-02-15",
+          "deposit_due": "2026-03-07"
+        }
+      ]
+    },
+    {
+      "id": "ded_002",
+      "pan": "EAASC3579D",
+      "name": "Build & Fix Contractors",
+      "is_206ab_applicable": false,
+      "is_pan_operative": true,
+      "payments": [
+        {
+          "id": "pmt_002",
+          "challan_serial": "00056",
+          "bsr_code": "0510308",
+          "section": "194C",
+          "code": "94C",
+          "nature": "Contractual Payment",
+          "payment_amount": 300000,
+          "tds_amount": 6000,
+          "tds_rate": 2,
+          "payment_date": "2026-01-20",
+          "deduction_date": "2026-01-20",
+          "deposit_due": "2026-02-07"
+        }
+      ]
+    },
+    {
+      "id": "ded_003",
+      "pan": "FAASR4680E",
+      "name": "Ravi Sharma (Consultant)",
+      "is_206ab_applicable": false,
+      "is_pan_operative": true,
+      "payments": [
+        {
+          "id": "pmt_003",
+          "challan_serial": "00067",
+          "bsr_code": "0510308",
+          "section": "194J",
+          "code": "94JB",
+          "nature": "Professional Services",
+          "payment_amount": 200000,
+          "tds_amount": 20000,
+          "tds_rate": 10,
+          "payment_date": "2026-02-28",
+          "deduction_date": "2026-02-28",
+          "deposit_due": "2026-03-07"
+        }
+      ]
+    },
+    {
+      "id": "ded_004",
+      "pan": "GAASP5791F",
+      "name": "Quick Rentals Pvt Ltd",
+      "is_206ab_applicable": false,
+      "is_pan_operative": true,
+      "payments": [
+        {
+          "id": "pmt_004",
+          "challan_serial": "00078",
+          "bsr_code": "0510308",
+          "section": "194I",
+          "code": "94IB",
+          "nature": "Rent (Land/Building)",
+          "payment_amount": 50000,
+          "tds_amount": 5000,
+          "tds_rate": 10,
+          "payment_date": "2026-03-01",
+          "deduction_date": "2026-03-01",
+          "deposit_due": "2026-04-07"
+        }
+      ]
+    },
+    {
+      "id": "ded_005",
+      "pan": "PANNOTAVBL",
+      "name": "M/s Anonymous Supplier",
+      "is_206ab_applicable": true,
+      "is_pan_operative": false,
+      "payments": [
+        {
+          "id": "pmt_005",
+          "challan_serial": "00078",
+          "bsr_code": "0510308",
+          "section": "194C",
+          "code": "94C",
+          "nature": "Contractual Payment",
+          "payment_amount": 25000,
+          "tds_amount": 5000,
+          "tds_rate": 20,
+          "payment_date": "2026-03-10",
+          "deduction_date": "2026-03-10",
+          "deposit_due": "2026-04-07"
+        }
+      ]
+    }
+  ],
+  "certificates": {
+    "form16": [
+      {
+        "financial_year": "FY 2024-25",
+        "status": "available",
+        "generated_date": "2025-07-15",
+        "employee_count": 10
+      }
+    ],
+    "form16a": [
+      {
+        "financial_year": "FY 2024-25",
+        "quarter": "Q4",
+        "status": "available",
+        "generated_date": "2025-07-10",
+        "deductee_count": 18
+      },
+      {
+        "financial_year": "FY 2025-26",
+        "quarter": "Q3",
+        "status": "available",
+        "generated_date": "2026-02-10",
+        "deductee_count": 25
+      }
+    ]
+  }
+}
